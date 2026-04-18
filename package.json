@@ -1,6 +1,6 @@
 {
   "name": "@rusintez/cfmail",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cloudflare-native email CLI + SDK — receive and send mail on any dev domain, powered by Email Routing, D1, R2 and the send_email binding.",
   "type": "module",
   "bin": {
