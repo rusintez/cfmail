@@ -1,0 +1,82 @@
+{
+  "name": "@rusintez/cfmail",
+  "version": "0.0.1",
+  "description": "Cloudflare-native email CLI + SDK — receive and send mail on any dev domain, powered by Email Routing, D1, R2 and the send_email binding.",
+  "type": "module",
+  "bin": {
+    "cfmail": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/sdk.d.ts",
+      "import": "./dist/sdk.js"
+    },
+    "./playwright": {
+      "types": "./dist/playwright.d.ts",
+      "import": "./dist/playwright.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "SKILL.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:types": "tsc -p tsconfig.build.json",
+    "dev": "node scripts/build.mjs --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm build"
+  },
+  "keywords": [
+    "cloudflare",
+    "email",
+    "email-routing",
+    "cli",
+    "workers",
+    "d1",
+    "r2",
+    "magic-link",
+    "e2e",
+    "playwright"
+  ],
+  "author": "Vladimir Popov <rusintez@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rusintez/cfmail"
+  },
+  "homepage": "https://github.com/rusintez/cfmail#readme",
+  "bugs": {
+    "url": "https://github.com/rusintez/cfmail/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@10.30.3",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "postal-mime": "^2.2.7",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250101.0",
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.0",
+    "@types/prompts": "^2.4.9",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.7.0"
+  },
+  "peerDependencies": {
+    "@playwright/test": "^1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@playwright/test": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
