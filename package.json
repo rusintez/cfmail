@@ -1,6 +1,6 @@
 {
   "name": "@rusintez/cfmail",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Cloudflare-native email CLI + SDK — receive and send mail on any dev domain, powered by Email Routing, D1, R2 and the send_email binding.",
   "type": "module",
   "bin": {
@@ -8,11 +8,11 @@
   },
   "exports": {
     ".": {
-      "types": "./dist/sdk.d.ts",
+      "types": "./dist/sdk/index.d.ts",
       "import": "./dist/sdk.js"
     },
     "./playwright": {
-      "types": "./dist/playwright.d.ts",
+      "types": "./dist/sdk/playwright.d.ts",
       "import": "./dist/playwright.js"
     }
   },
